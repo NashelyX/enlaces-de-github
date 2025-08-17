@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Bootstrap</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. Encabezado principal -->
+    <header class="container bg-light shadow py-4 mb-5">
+        <h1 class="text-center text-primary">Evaluación Práctica de Bootstrap</h1>
+    </header>
+
+    <!-- 2. Sección de tarjetas informativas -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bg-success text-white border rounded p-3">
+                    <h2 class="fw-bold text-center">Tarjeta 1</h2>
+                    <p>Contenido de la tarjeta 1.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-danger bg-opacity-75 text-white border border-opacity-50 rounded p-3">
+                    <h2 class="fw-bold text-center">Tarjeta 2</h2>
+                    <p>Contenido de la tarjeta 2.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-warning bg-gradient text-white border rounded p-3">
+                    <h2 class="fw-bold text-center">Tarjeta 3</h2>
+                    <p>Contenido de la tarjeta 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Perfil con Flexbox -->
+    <section class="container my-5">
+        <div class="card d-flex flex-column flex-md-row align-items-center shadow-lg p-4">
+            <img src="https://media.gq.com.mx/photos/66b3e2ab1eb4176c241add84/16:9/w_2560%2Cc_limit/Mejores_series_de_anime.jpg" class="rounded-circle w-25" alt="Perfil">
+            <div class="flex-grow-1 text-center text-md-start me-md-4">
+                <h3>Nombre del Usuario</h3>
+                <p>Descripción del perfil.</p>
+                <div class="d-flex gap-2 justify-content-md-start">
+                    <button class="btn btn-primary">seguir </button>
+                    <button class="btn btn-secondary">mensaje </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Imágenes con object-fit -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.agendartecultura.com.br/wp-content/uploads/2021/08/Demon-Slayer-divulga%C3%A7%C3%A3o-1024x576.png" class="card-img-top object-fit-cover" style="height: 200px;" alt="Imagen 1">
+                    <div class="card-body">
+                        <p class="card-text">Imagen con object-fit: cover.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPJq65-Eq7BWms8wHEZkNj8hQTa5Q9hPIF1P35TiT_AMnC6KmtNCaZTlsWi5WIKwFKTQ&usqp=CAU" class="card-img-top object-fit-contain" style="height: 200px;" alt="Imagen 2">
+                    <div class="card-body">
+                        <p class="card-text">Imagen con object-fit: contain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.agendartecultura.com.br/wp-content/uploads/2021/08/Demon-Slayer-divulga%C3%A7%C3%A3o-1024x576.png" class="card-img-top object-fit-none" style="height: 200px;" alt="Imagen 3">
+                    <div class="card-body">
+                        <p class="card-text">Imagen sin object-fit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Alineación Vertical -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-center">Ejemplo: Alineación Vertical</h2>
+        <!-- Imagen alineada con diferentes clases -->
+        <div class="bg-light p-3 rounded">
+        <p>
+        
+        <img src="https://via.placeholder.com/40" class="align-baseline me-
+        2" alt="baseline">
+        
+        <strong>.align-baseline</strong> (por defecto)
+        </p>
+        <p>
+        <img src="https://via.placeholder.com/40" class="align-top me-2" alt="top">
+        <strong>.align-top</strong>
+        </p>
+        <p>
+        <img src="https://via.placeholder.com/40" class="align-middle me-2" alt="middle">
+        <strong>.align-middle</strong>
+        </p>
+        <p>
+        <img src="https://via.placeholder.com/40" class="align-bottom me-2" alt="bottom">
+        <strong>.align-bottom</strong>
+        </p>
+        <p>
+        
+        <img src="https://via.placeholder.com/40" class="align-text-top me-2" alt="text-top">
+        
+        <strong>.align-text-top</strong>
+        </p>
+        <p>
+
+    <!-- 6. Control de visibilidad -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col text-center fw-bold bg-primary p-3 visible">Visible</div>
+            <div class="col text-center fw-bold bg-secondary p-3 invisible">Invisible</div>
+            <div class="col text-center fw-bold bg-danger p-3 d-none">No visible</div>
+        </div>
+    </section>
+
+    <!-- 7. Posicionamiento con position-* y z-index -->
+    <section class="container my-5 position-relative" style="height: 300px;">
+        <h2 class="mb-4 text-center">Ejemplo: Control de Z-Index</h2>
+        <!-- Fondo (z-0) -->
+        <div class="position-absolute top-0 start-0 bg-secondary text-white p-3
+        z-0" style="width: 100%; height: 100%;">
+        Fondo z-0 (debajo de todo)
+        </div>
+        <!-- Caja intermedia (z-1) :) -->
+        <div class="position-absolute top-50 start-50 bg-warning text-dark p-3 z-1 translate-middle" style="width: 60%;">
+        Capa intermedia z-1
+        </div>
+        <!-- Caja superior (z-3) :) -->
+        
+        <div class="position-absolute top-0 end-0 bg-danger text-white p-2 z-3">
+        
+        Etiqueta flotante z-3
+        </div>
+        </section>
+
+    <!-- 8. Flotación con .float-* y .clearfix -->
+    <section class="container my-5 clearfix">
+        <div class="float-start bg-success p-3">Caja flotante izquierda</div>
+        <div class="float-end bg-danger p-3">Caja flotante derecha</div>
+        <div class="clearfix"></div>
+        <p>Texto debajo de las cajas flotantes.</p>
+    </section>
+
+    <!-- 9. Enlaces estilizados -->
+    <section class="container my-5">
+        <ul>
+            <li><a href="#" class="link-primary">Enlace 1</a></li>
+            <li><a href="#" class="link-secondary link-underline">Enlace 2</a></li>
+            <li><a href="#" class="link-success link-offset-2">Enlace 3</a></li>
+            <li><a href="#" class="link-danger link-opacity-50 link-opacity-100-hover">Enlace 4</a></li>
+        </ul>
+    </section>
+
+    <!-- 10. Formulario con interactions -->
+    <section class="container my-5">
+        <form>
+            <p class="user-select-none">Este texto no se puede seleccionar.</p>
+            <button type="button" class="btn btn-primary pe-none">Botón no interactivo</button>
+            <textarea class="resize-y" rows="4"></textarea>
+        </form>
+    </section>
+
+    <!-- 11. Control de Overflow -->
+
+
+    <section class="container my-5">
+        <div class="border overflow-auto p-3 rounded" style="height: 200px;">
+        <p><strong>Scroll vertical (overflow-auto):</strong></p>
+        <p>gato</p>
+        <p>gato</p>
+        <p>gato</p>
+        <p>gato</p>
+        <p>gato</p>
+        </div>
+        </div>
+        </section>
+
+    <!-- 12. Control de tamaño (sizing) -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 w-25 bg-light p-3">Tarjeta 25%</div>
+            <div class="col-md-4 w-50 bg-light p-3">Tarjeta 50%</div>
+            <div class="col-md-4 w-100 bg-light p-3">Tarjeta 100%</div>
+        </div>
+        <div class="vh-100 vw-100 d-flex justify-content-center align-items-center bg-secondary text-white">
+            <h1>Banner de Pantalla Completa</h1>
+        </div>
+    </section>
+
+    <!-- 13. Utilidades de Texto -->
+    <section class="container my-5">
+        <h2 class="text-primary text-center fw-bold">Título Principal</h2>
+        <p class="text-danger text-uppercase">Texto en mayúsculas.</p>
+        <p class="text-capitalize">Texto capitalizado.</p>
+        <p class="fw-bold fst-italic">Texto en negrita y cursiva.</p>
+        <p class="text-truncate overflow-hidden" style="width: 300px;">Este es un texto largo que será truncado.</p>
+    </section>
+
+    <!-- Scripts de Bootstrap (opcional, si necesitas alguna funcionalidad JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
